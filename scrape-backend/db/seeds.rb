@@ -4,7 +4,7 @@ puts "🌱 Seeding spices..."
 
 puts scrapped_data
 
-Message.create(scrapped_data)
+Article.create(scrapped_data)
 # Message.create([
 #   {
 #     body: "Hello 👋",
