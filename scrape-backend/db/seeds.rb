@@ -1,5 +1,23 @@
+scrapped_data = `ruby book_scraper.rb`
+
 puts "🌱 Seeding spices..."
 
-# Seed your database here
+puts scrapped_data
+
+Message.create(scrapped_data)
+# Message.create([
+#   {
+#     body: "Hello 👋",
+#     username: "Liza"
+#   },
+#   {
+#     body: "Hi!",
+#     username: "Duane"
+#   },
+#   {
+#     body: "let's get this chat app working",
+#     username: "Liza"
+#   }
+# ])
 
 puts "✅ Done seeding!"
