@@ -1,4 +1,4 @@
-class ApplicationController < Sinatra::Base
+class ReaderController < Sinatra::Base
     set :default_content_type, 'application/json'
     
     #GET => Readers
