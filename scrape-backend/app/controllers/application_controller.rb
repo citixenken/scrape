@@ -4,6 +4,7 @@ class ApplicationController < Sinatra::Base
   # GET => Articles
   get "/articles" do
     articles = Article.all.order(:created_at)
+    articles.to_json
   end
 
 end

@@ -31,7 +31,7 @@ def create_article_hash
     Reader.destroy_all
     Review.destroy_all
 
-    puts "🌱 Seeding articles..."
+    puts "🌱 Seeding articles, readers, and reviews..."
 
     articles.map do |article|
         article_instance = Article.create(article)
