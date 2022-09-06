@@ -4,7 +4,9 @@ const ArticleItem = ({ article }) => {
   const { id, title, web_url, byline, author, date_published } = article;
   return (
     <div>
-      <a href={web_url}>{title}</a>
+      <a href={web_url} target="_blank">
+        {title}
+      </a>
       <br />
       <small>{byline}</small>
       <p>

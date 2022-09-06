@@ -2,7 +2,8 @@ import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import { BrowserRouter as Router } from "react-router-dom";
 import NavBar from "../navbar/NavBar";
-import Articles from "../article/Article";
+import Landing from "../landing/Landing";
+import Articles from "../articles/Articles";
 import Readers from "../reader/Reader";
 import Reviews from "../review/Review";
 import Footer from "../footer/Footer";
@@ -13,6 +14,7 @@ function App() {
       <Router>
         <NavBar />
         <Routes>
+          <Route path="/" element={<Landing />} />
           <Route path="/articles" element={<Articles />} />
           <Route path="/reviews" element={<Reviews />} />
           <Route path="/readers" element={<Readers />} />
