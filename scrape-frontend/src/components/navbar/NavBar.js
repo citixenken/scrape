@@ -10,13 +10,13 @@ function NavBar() {
         fontFamily: "Varela Round",
       }}
     >
-      <NavLink className=" teal header item" to="/">
+      <NavLink className="teal header item" to="/articles">
         Articles
       </NavLink>
-      <NavLink className="teal item" to="/week">
+      <NavLink className="teal item" to="/reviews">
         Reviews
       </NavLink>
-      <NavLink className="teal item" to="/mylibrary">
+      <NavLink className="teal item" to="/readers">
         Readers
       </NavLink>
     </nav>
