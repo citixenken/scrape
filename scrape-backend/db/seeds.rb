@@ -3,6 +3,7 @@ require 'nokogiri'
 require 'open-uri'
 require 'pry'
 require 'json'
+require 'faker'
 
 def create_article_hash
     url = 'https://arstechnica.com/'
@@ -22,16 +23,17 @@ def create_article_hash
             date_published: published_article.css('header p.byline time.date').text
         }
         articles << article
-        # binding.pry
     end
 
     articles
 
     Article.destroy_all
+    Review.destroy_all
 
     puts "🌱 Seeding articles..."
 
     Article.create(articles)
+    Review.create(comment: Faker::Lorem.sentence, rating: rand(1..5), article_id: article.id, reader_id: reader.id)
 
     puts "✅ Done seeding!"
 end
