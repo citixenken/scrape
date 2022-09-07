@@ -22,6 +22,9 @@ function NavBar() {
       <NavLink className="teal item" to="/readers">
         Readers
       </NavLink>
+      <NavLink className="teal item" to="/add_article">
+        Add Article
+      </NavLink>
     </nav>
   );
 }
