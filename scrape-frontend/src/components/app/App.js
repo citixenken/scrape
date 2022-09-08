@@ -7,6 +7,7 @@ import Articles from "../articles/Articles";
 import Readers from "../reader/Reader";
 import Reviews from "../review/Review";
 import Footer from "../footer/Footer";
+import AddArticle from "../addarticle/AddArticle";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/articles" element={<Articles />} />
           <Route path="/reviews" element={<Reviews />} />
           <Route path="/readers" element={<Readers />} />
+          <Route path="/add_article" element={<AddArticle />} />
           <Route
             path="*"
             element={<h2 style={{ color: "red" }}>404 Page Not Found</h2>}
