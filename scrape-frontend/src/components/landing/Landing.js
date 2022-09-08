@@ -3,16 +3,13 @@ import React from "react";
 const Landing = () => {
   return (
     <div>
-      <h3>
-        Find all the latest <italic>ARTICLES</italic> scrapped off ArsTechnica
-        Blog!
-      </h3>
+      <h3>Find all the latest ARTICLES scrapped off ArsTechnica Blog!</h3>
       <iframe
         src="https://giphy.com/embed/xUPJPuBSBM4GEMb7Ec"
         width="480"
         height="360"
         frameBorder="0"
-        class="giphy-embed"
+        className="giphy-embed"
         allowFullScreen
       ></iframe>
       <p>

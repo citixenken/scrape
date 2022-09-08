@@ -1,17 +1,27 @@
+import "./ArticleItem.css";
 import React, { useState } from "react";
+import EditArticle from "../editarticle/EditArticle";
 import { Link } from "react-router-dom";
 
-const ArticleItem = ({ article, onDeleteArticle }) => {
+function ArticleItem({ article, onDeleteArticle, onUpdateArticle }) {
   const { id, title, web_url, byline, author, date_published } = article;
+  const [allowEdit, setAllowEdit] = useState(false);
   const [favState, setFavState] = useState("");
 
   //DELETE FROM DB
   //==============
   function handleArticleDelete() {
-    fetch(`http://localhost:9292/articles/${article.id}`, { method: "DELETE" })
+    fetch(`http://localhost:9292/articles/${id}`, { method: "DELETE" })
       .then((res) => res.json())
       .then(() => onDeleteArticle(article))
       .catch((err) => console.error(err));
+  }
+
+  // UPDATE ARTICLE
+  // ==============
+  function handleArticleUpdate(updatedArticle) {
+    setAllowEdit(false);
+    onUpdateArticle(updatedArticle);
   }
 
   //FAVOURITE ARTICLE ITEM
@@ -21,16 +31,25 @@ const ArticleItem = ({ article, onDeleteArticle }) => {
   }
 
   return (
-    <div>
+    <li>
       <a href={web_url} target="_blank">
         {title}
       </a>
       <br />
       <small>{byline}</small>
-      <p>
-        Written by: {author} on {date_published}
-      </p>
+      {allowEdit ? (
+        <EditArticle
+          id={id}
+          author={author}
+          onUpdateArticle={handleArticleUpdate}
+        />
+      ) : (
+        <p>{author}</p>
+      )}
+
+      <p>Written on: {date_published}</p>
       <br />
+
       <button
         className="ui submit primary button left floated"
         onClick={handleFavState}
@@ -38,16 +57,29 @@ const ArticleItem = ({ article, onDeleteArticle }) => {
         {favState ? "❤️Favorite" : "🤍Favorite"}
       </button>
 
-      {/* DELETE BOOK */}
-      <button
+      {/* DELETE ARTICLE */}
+      {/* <button
         onClick={handleArticleDelete}
         className="ui submit basic red button right floated"
         style={{ color: "red" }}
       >
         Delete
+      </button> */}
+
+      {/* UPDATE TITLE */}
+      <button onClick={() => setAllowEdit((allowEdit) => !allowEdit)}>
+        <span role="img" aria-label="edit">
+          ✏️
+        </span>
       </button>
-    </div>
+
+      <button onClick={handleArticleDelete}>
+        <span role="img" aria-label="delete">
+          🗑
+        </span>
+      </button>
+    </li>
   );
-};
+}
 
 export default ArticleItem;

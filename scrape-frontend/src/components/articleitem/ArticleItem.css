@@ -1,0 +1,11 @@
+li .actions {
+  position: absolute;
+  top: 0;
+  transform: translateY(-50%);
+  right: 1rem;
+  display: none;
+}
+
+li:hover .actions {
+  display: block;
+}

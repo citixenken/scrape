@@ -20,6 +20,19 @@ const Articles = () => {
     article.title.toLowerCase().includes(articleSearch.toLowerCase())
   );
 
+  // UPDATE ARTICLE
+  // ==============
+  function handleArticleUpdate(updatedArticle) {
+    const updatedArticles = articles.map((article) => {
+      if (article.id === updatedArticle.id) {
+        return updatedArticle;
+      } else {
+        return article;
+      }
+    });
+    setArticles(updatedArticles);
+  }
+
   //DELETE ARTICLE FROM DB
   //======================
   function handleArticleDelete(deletedArticle) {
@@ -31,7 +44,6 @@ const Articles = () => {
 
   return (
     <div>
-      {/* <ArticleList articles={articles} /> */}
       <div className="ui container">
         <div className="ui very padded piled tertiary segment">
           <h1
@@ -60,7 +72,6 @@ const Articles = () => {
             <i className="book icon"></i>
           </div>
         </div>
-        {/* SEARCH FIELD */}
 
         <div className="ui very padded teal secondary inverted  segment">
           {articles ? (
@@ -71,6 +82,7 @@ const Articles = () => {
                     key={idx}
                     article={article}
                     onDeleteArticle={handleArticleDelete}
+                    onUpdateArticle={handleArticleUpdate}
                   />
                 </div>
               ))}
