@@ -7,6 +7,8 @@ const Articles = () => {
 
   const URL = "http://localhost:9292/articles";
 
+  // CREATE (READ) ARTICLES
+  // ======================
   useEffect(() => {
     fetch(URL)
       .then((r) => r.json())
@@ -76,15 +78,13 @@ const Articles = () => {
         <div className="ui very padded teal secondary inverted  segment">
           {articles ? (
             <div className="ui doubling very padded stackable grid container">
-              {articlesToDisplay.map((article, idx) => (
-                <div className="four wide column">
-                  <ArticleItem
-                    key={idx}
-                    article={article}
-                    onDeleteArticle={handleArticleDelete}
-                    onUpdateArticle={handleArticleUpdate}
-                  />
-                </div>
+              {articlesToDisplay.map((article) => (
+                <ArticleItem
+                  key={article.id}
+                  article={article}
+                  onDeleteArticle={handleArticleDelete}
+                  onUpdateArticle={handleArticleUpdate}
+                />
               ))}
             </div>
           ) : (

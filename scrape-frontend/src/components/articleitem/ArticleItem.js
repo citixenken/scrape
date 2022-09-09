@@ -41,6 +41,10 @@ function ArticleItem({ article, onDeleteArticle, onUpdateArticle }) {
         <EditArticle
           id={id}
           author={author}
+          title={title}
+          web_url={web_url}
+          byline={byline}
+          date_published={date_published}
           onUpdateArticle={handleArticleUpdate}
         />
       ) : (
