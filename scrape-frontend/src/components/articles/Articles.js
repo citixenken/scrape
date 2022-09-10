@@ -6,6 +6,10 @@ const Articles = () => {
   const [articleSearch, setArticleSearch] = useState("");
 
   const URL = "http://localhost:9292/articles";
+  const current = new Date();
+  const date = `${current.getDate()}/${
+    current.getMonth() + 1
+  }/${current.getFullYear()}`;
 
   // CREATE (READ) ARTICLES
   // ======================
@@ -56,7 +60,7 @@ const Articles = () => {
               fontFamily: "Varela Round",
             }}
           >
-            My Library Collection
+            Latest Articles as of {date}
           </h1>
         </div>
 
