@@ -80,7 +80,7 @@ const Articles = () => {
         </div>
 
         <div>
-          {articles ? (
+          {articlesToDisplay.length > 0 ? (
             <div className="ui middle aligned animated relaxed divided list">
               {articlesToDisplay.map((article) => (
                 <ArticleItem
@@ -95,7 +95,7 @@ const Articles = () => {
             <div className="ui massive very padded inverted segment">
               <div className="ui active inverted dimmer">
                 <div className="ui indeterminate large text loader">
-                  <h6>Search To Retrieve Articles</h6>
+                  <h6>Article Not Found in Database</h6>
                 </div>
               </div>
               <p></p>

@@ -38,44 +38,65 @@ const EditArticle = ({
       .then((updatedArticle) => onUpdateArticle(updatedArticle));
   }
   return (
-    <form className="edit-message" onSubmit={handleFormSubmit}>
-      <input
-        type="text"
-        name="author"
-        autoComplete="off"
-        value={articleAuthor}
-        onChange={(e) => setArticleAuthor(e.target.value)}
-      />
-      <input
-        type="text"
-        name="title"
-        autoComplete="off"
-        value={articleTitle}
-        onChange={(e) => setArticleTitle(e.target.value)}
-      />
-      <input
-        type="text"
-        name="web_url"
-        autoComplete="off"
-        value={articleWebUrl}
-        onChange={(e) => setArticleWebUrl(e.target.value)}
-      />
-      <input
-        type="text"
-        name="byline"
-        autoComplete="off"
-        value={articleByline}
-        onChange={(e) => setArticleByline(e.target.value)}
-      />
-      <input
-        type="text"
-        name="date_published"
-        autoComplete="off"
-        value={articleDatePublished}
-        onChange={(e) => setArticleDatePublished(e.target.value)}
-      />
-      <input type="submit" value="Save" />
-    </form>
+    <div className="ui very padded teal inverted segment">
+      <form className="ui form big success" onSubmit={handleFormSubmit}>
+        <div className="required field">
+          <input
+            type="text"
+            name="author"
+            autoComplete="off"
+            value={articleAuthor}
+            onChange={(e) => setArticleAuthor(e.target.value)}
+          />
+        </div>
+
+        <div className="required field">
+          <input
+            type="text"
+            name="title"
+            autoComplete="off"
+            value={articleTitle}
+            onChange={(e) => setArticleTitle(e.target.value)}
+          />
+        </div>
+
+        <div className="required field">
+          <input
+            type="text"
+            name="web_url"
+            autoComplete="off"
+            value={articleWebUrl}
+            onChange={(e) => setArticleWebUrl(e.target.value)}
+          />
+        </div>
+
+        <div className="required field">
+          <input
+            type="text"
+            name="byline"
+            autoComplete="off"
+            value={articleByline}
+            onChange={(e) => setArticleByline(e.target.value)}
+          />
+        </div>
+
+        <div className="required field">
+          <input
+            type="text"
+            name="date_published"
+            autoComplete="off"
+            value={articleDatePublished}
+            onChange={(e) => setArticleDatePublished(e.target.value)}
+          />
+        </div>
+
+        <input
+          className="ui submit primary huge button"
+          type="submit"
+          value="Save"
+        />
+      </form>
+    </div>
   );
 };
 

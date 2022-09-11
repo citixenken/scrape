@@ -86,7 +86,7 @@ const NewArticleForm = ({ onArticleFormSubmission }) => {
               className="ui submit primary huge button"
               type="submit"
               value="Submit"
-              style={{ margin: 20 }}
+              style={{ margin: 10 }}
             />
           </form>
         </div>
