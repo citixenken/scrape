@@ -25,11 +25,19 @@ const AddArticle = () => {
       .catch((err) => console.error(err));
   }
   return (
-    <div>
-      Add an article here...
+    <div className="ui very padded segment item">
+      <p
+        className="header"
+        style={{
+          fontSize: 24,
+          fontFamily: "Varela Round",
+        }}
+      >
+        Have a favourite article? Add it here...👇🏾
+      </p>
       {/* ADD NEW ARTICLE BUTTON */}
       <div
-        className="ui secondary inverted button"
+        className="ui fade teal button"
         tabIndex="0"
         onClick={handleToggleArticleButton}
         style={{ margin: 10, padding: 20 }}

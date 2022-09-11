@@ -32,7 +32,7 @@ const NewArticleForm = ({ onArticleFormSubmission }) => {
     });
   }
   return (
-    <div className="ui container ">
+    <div className="ui container">
       {showArticleForm ? null : (
         <div className="ui very padded teal inverted segment">
           <form className="ui form big success" onSubmit={handleFormSubmit}>
@@ -50,7 +50,7 @@ const NewArticleForm = ({ onArticleFormSubmission }) => {
                 type="text"
                 name="web_url"
                 value={newArticle.web_url}
-                placeholder="Enter Web URL"
+                placeholder="https://"
                 onChange={handleFormChange}
               />
             </div>
