@@ -1,8 +1,27 @@
 import "./Reviews.css";
-import React from "react";
+import React, { useState, useEffect } from "react";
+import ReviewItem from "../ReviewItem";
 
 function Reviews() {
-  return <div>Reviews</div>;
+  const [reviews, setReviews] = useState([]);
+
+  const URL = "http://localhost:9292/reviews";
+
+  // CREATE (READ) REVIEWS
+  // ======================
+  useEffect(() => {
+    fetch(URL)
+      .then((r) => r.json())
+      .then((reviews) => setReviews(reviews))
+      .catch((err) => console.error(err));
+  }, []);
+  return (
+    <div>
+      {reviews.map((review) => (
+        <ReviewItem key={review.id} review={review} />
+      ))}
+    </div>
+  );
 }
 
 export default Reviews;
