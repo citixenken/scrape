@@ -59,9 +59,6 @@ Used the provided [Backend Setup template](https://github.com/citixenken/scrape/
 
 Backend Heroku live [link](https://bookhub-app.herokuapp.com/)
 
-## Demo
-![Scraper_Demo_Image](public/scraper.png)
-
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
