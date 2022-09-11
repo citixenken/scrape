@@ -5,7 +5,7 @@ function NavBar() {
   return (
     <nav
       // className="ui pointing massive stackable menu"
-      className="ui massive celled horizontal list"
+      className="ui pointing massive celled horizontal list"
       style={{
         fontSize: 18,
         fontFamily: "Varela Round",

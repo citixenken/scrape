@@ -4,7 +4,7 @@ function Footer() {
   return (
     <footer className="footer">
       <div className="ui container">
-        <div className="ui inverted grey vertical footer  padded  segment">
+        <div className="ui inverted grey vertical footer padded segment">
           <div className="ui center aligned container">
             <div className="text-center p-3">
               Scrape 2022 © All Rights Reserved. Created by

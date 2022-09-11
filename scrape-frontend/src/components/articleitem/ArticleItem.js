@@ -31,7 +31,7 @@ function ArticleItem({ article, onDeleteArticle, onUpdateArticle }) {
   }
 
   return (
-    <div className="item">
+    <div className="ui very padded segment item">
       <a
         className="header"
         href={web_url}
@@ -66,11 +66,11 @@ function ArticleItem({ article, onDeleteArticle, onUpdateArticle }) {
         <div className="right floated content">
           <div className="ui animated fade teal button">
             <div className="visible content">View Story</div>
-            <div className="hidden content">
-              <a href={web_url} target="_blank">
+            <a href={web_url} target="_blank">
+              <div className="hidden content">
                 <i className="right arrow icon"></i>
-              </a>
-            </div>
+              </div>
+            </a>
           </div>
         </div>
       </div>

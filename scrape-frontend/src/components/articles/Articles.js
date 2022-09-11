@@ -51,9 +51,9 @@ const Articles = () => {
   return (
     <div>
       <div className="ui container">
-        <div className="ui very padded piled tertiary segment">
+        <div className="ui very padded tertiary segment">
           <h1
-            className="ui header huge"
+            className="ui header center aligned huge"
             style={{
               color: "firebrick",
               fontSize: 36,
@@ -65,9 +65,9 @@ const Articles = () => {
         </div>
 
         {/* SEARCH FIELD */}
-        <div className="ui very padded tertiary segment">
+        <div className="ui padded tertiary segment">
           {/* SEARCH INPUT */}
-          <div className="ui input huge left icon fluid search focus ">
+          <div className="ui input huge left icon fluid search focus">
             <input
               type="text"
               name="articleSearch"
@@ -75,7 +75,7 @@ const Articles = () => {
               placeholder="Search Article By Title"
               onChange={(e) => setArticleSearch(e.target.value)}
             />
-            <i className="book icon"></i>
+            <i className="newspaper icon"></i>
           </div>
         </div>
 
