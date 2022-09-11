@@ -18,7 +18,7 @@ const Landing = () => {
         </h1>
 
         <h3 style={{ color: "teal", fontSize: 20, fontFamily: "Varela Round" }}>
-          Get latest Articles Scraped off Your Favourite Blog
+          Get Latest Articles Scraped off Your Favourite Blog
         </h3>
       </div>
       {/* GO TO ARTICLES */}
