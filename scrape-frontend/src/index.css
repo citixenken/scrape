@@ -3,6 +3,11 @@ body {
   font-family: "Varela Round", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url("https://images.pexels.com/photos/5691695/pexels-photo-5691695.jpeg?cs=srgb&dl=pexels-ksenia-chernaya-5691695.jpg&fm=jpg");
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 code {

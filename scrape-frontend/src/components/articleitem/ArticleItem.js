@@ -31,7 +31,7 @@ function ArticleItem({ article, onDeleteArticle, onUpdateArticle }) {
   }
 
   return (
-    <div className="ui very padded segment item">
+    <div className="ui very padded tertiary segment item">
       <a
         className="header"
         href={web_url}
@@ -39,6 +39,7 @@ function ArticleItem({ article, onDeleteArticle, onUpdateArticle }) {
         style={{
           fontSize: 24,
           fontFamily: "Varela Round",
+          padding: 20,
         }}
       >
         <i className="linkify icon"></i>
