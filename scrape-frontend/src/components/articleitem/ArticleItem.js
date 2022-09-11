@@ -25,64 +25,83 @@ function ArticleItem({ article, onDeleteArticle, onUpdateArticle }) {
   }
 
   //FAVOURITE ARTICLE ITEM
-  //===================
+  //======================
   function handleFavState() {
     setFavState((favState) => !favState);
   }
 
   return (
-    <li>
-      <a href={web_url} target="_blank">
+    <div className="item">
+      <a
+        className="header"
+        href={web_url}
+        target="_blank"
+        style={{
+          fontSize: 24,
+          fontFamily: "Varela Round",
+        }}
+      >
+        <i className="linkify icon"></i>
         {title}
       </a>
       <br />
-      <small>{byline}</small>
-      {allowEdit ? (
-        <EditArticle
-          id={id}
-          author={author}
-          title={title}
-          web_url={web_url}
-          byline={byline}
-          date_published={date_published}
-          onUpdateArticle={handleArticleUpdate}
-        />
-      ) : (
-        <p>{author}</p>
-      )}
+      <div className="content">
+        <p className="description">{byline}</p>
+        {allowEdit ? (
+          <EditArticle
+            id={id}
+            author={author}
+            title={title}
+            web_url={web_url}
+            byline={byline}
+            date_published={date_published}
+            onUpdateArticle={handleArticleUpdate}
+          />
+        ) : (
+          <p className="description">{author}</p>
+        )}
 
-      <p>Written on: {date_published}</p>
-      <br />
+        <p className="description">Written on: {date_published}</p>
+        <br />
+        <div class="right floated content">
+          <div class="ui button">
+            <a href={web_url} target="_blank">
+              View Story
+            </a>
+          </div>
+        </div>
+      </div>
 
+      {/* FAV BUTTON */}
       <button
         className="ui submit primary button left floated"
         onClick={handleFavState}
       >
-        {favState ? "❤️Favorite" : "🤍Favorite"}
+        {favState ? "❤️ Favorite" : "🤍 Favorite"}
       </button>
 
-      {/* DELETE ARTICLE */}
-      {/* <button
-        onClick={handleArticleDelete}
-        className="ui submit basic red button right floated"
-        style={{ color: "red" }}
+      {/* UPDATE BUTTON */}
+      <button
+        className="ui submit secondary button left floated"
+        onClick={() => setAllowEdit((allowEdit) => !allowEdit)}
       >
-        Delete
-      </button> */}
-
-      {/* UPDATE TITLE */}
-      <button onClick={() => setAllowEdit((allowEdit) => !allowEdit)}>
-        <span role="img" aria-label="edit">
+        {/* <span role="img" aria-label="edit">
           ✏️
-        </span>
+        </span> */}
+        ✎ Edit
       </button>
 
-      <button onClick={handleArticleDelete}>
-        <span role="img" aria-label="delete">
+      {/* DELETE BUTTON */}
+      <button
+        className="ui submit primary button left floated"
+        onClick={handleArticleDelete}
+      >
+        {/* <span role="img" aria-label="delete">
           🗑
-        </span>
+        </span> */}
+        🗑 Delete
       </button>
-    </li>
+    </div>
   );
 }
 

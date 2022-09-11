@@ -79,9 +79,9 @@ const Articles = () => {
           </div>
         </div>
 
-        <div className="ui very padded teal secondary inverted  segment">
+        <div>
           {articles ? (
-            <div className="ui doubling very padded stackable grid container">
+            <div className="ui middle aligned animated relaxed divided list">
               {articlesToDisplay.map((article) => (
                 <ArticleItem
                   key={article.id}
