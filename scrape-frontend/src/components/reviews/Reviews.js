@@ -1,4 +1,4 @@
-import "./Review.css";
+import "./Reviews.css";
 import React from "react";
 
 function Reviews() {

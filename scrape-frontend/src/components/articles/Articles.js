@@ -94,8 +94,16 @@ const Articles = () => {
           ) : (
             <div className="ui massive very padded inverted segment">
               <div className="ui active inverted dimmer">
-                <div className="ui indeterminate large text loader">
-                  <h6>Article Not Found in Database</h6>
+                <div className="ui indeterminate medium text loader">
+                  <h6
+                    style={{
+                      fontSize: 24,
+                      fontFamily: "Varela Round",
+                      color: "red",
+                    }}
+                  >
+                    Article Not Found in Database
+                  </h6>
                 </div>
               </div>
               <p></p>

@@ -4,8 +4,8 @@ import { BrowserRouter as Router } from "react-router-dom";
 import NavBar from "../navbar/NavBar";
 import Landing from "../landing/Landing";
 import Articles from "../articles/Articles";
-import Readers from "../reader/Reader";
-import Reviews from "../review/Review";
+import Readers from "../readers/Readers";
+import Reviews from "../reviews/Reviews";
 import Footer from "../footer/Footer";
 import AddArticle from "../addarticle/AddArticle";
 
