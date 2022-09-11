@@ -63,11 +63,14 @@ function ArticleItem({ article, onDeleteArticle, onUpdateArticle }) {
 
         <p className="description">Written on: {date_published}</p>
         <br />
-        <div class="right floated content">
-          <div class="ui button">
-            <a href={web_url} target="_blank">
-              View Story
-            </a>
+        <div className="right floated content">
+          <div className="ui animated fade teal button">
+            <div className="visible content">View Story</div>
+            <div className="hidden content">
+              <a href={web_url} target="_blank">
+                <i className="right arrow icon"></i>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -75,31 +78,35 @@ function ArticleItem({ article, onDeleteArticle, onUpdateArticle }) {
       {/* FAV BUTTON */}
       <button
         className="ui submit primary button left floated"
+        // className="ui labeled icon button"
         onClick={handleFavState}
       >
+        {/* <i className="heart outline icon"></i> */}
         {favState ? "❤️ Favorite" : "🤍 Favorite"}
       </button>
 
       {/* UPDATE BUTTON */}
       <button
-        className="ui submit secondary button left floated"
+        className="ui submit grey button left floated"
         onClick={() => setAllowEdit((allowEdit) => !allowEdit)}
       >
+        <i className="edit icon"></i>
         {/* <span role="img" aria-label="edit">
           ✏️
         </span> */}
-        ✎ Edit
+        Edit
       </button>
 
       {/* DELETE BUTTON */}
       <button
-        className="ui submit primary button left floated"
+        className="ui submit red button left floated"
         onClick={handleArticleDelete}
       >
+        <i className="delete icon"></i>
         {/* <span role="img" aria-label="delete">
           🗑
         </span> */}
-        🗑 Delete
+        Delete
       </button>
     </div>
   );
