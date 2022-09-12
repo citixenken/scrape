@@ -1,7 +1,7 @@
 require 'json'
 require 'nokogiri'
 require 'open-uri'
-require 'pry'
+# require 'pry'
 require 'json'
 require 'faker'
 
