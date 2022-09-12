@@ -57,7 +57,7 @@ Frontend Netlify live [link](https://bookhub-app.netlify.app/)
 ### Backend - via Heroku
 Used the provided [Backend Setup template](https://github.com/citixenken/scrape/tree/main/scrape-backend) to generate backend code. Facilitates faster deployment of generated JSON data to Heroku.
 
-Backend Heroku live [link](https://bookhub-app.herokuapp.com/)
+Backend Heroku live [link](https://scrape-backend.herokuapp.com/)
 
 ## Contributing
 
