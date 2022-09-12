@@ -5,6 +5,8 @@ const AddArticle = () => {
   const [articles, setArticles] = useState([]);
   const [showArticleForm, setShowArticleForm] = useState(false);
 
+  const URL = `${process.env.REACT_APP_API_URL}/articles`;
+
   //  DISPLAY NEW ARTICLE FORM
   // =========================
   function handleToggleArticleButton() {
@@ -19,7 +21,7 @@ const AddArticle = () => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newArticle),
     };
-    fetch("http://localhost:9292/articles", options)
+    fetch(URL, options)
       .then((res) => res.json())
       .then((newArticle) => setArticles([...articles, newArticle]))
       .catch((err) => console.error(err));

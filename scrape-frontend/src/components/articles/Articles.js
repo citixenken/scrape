@@ -5,7 +5,9 @@ const Articles = () => {
   const [articles, setArticles] = useState([]);
   const [articleSearch, setArticleSearch] = useState("");
 
-  const URL = "http://localhost:9292/articles";
+  // const URL = "http://localhost:9292/articles";
+  const URL = `${process.env.REACT_APP_API_URL}/articles`;
+
   const current = new Date();
   const date = `${current.getDate()}/${
     current.getMonth() + 1

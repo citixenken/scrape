@@ -8,10 +8,12 @@ function ArticleItem({ article, onDeleteArticle, onUpdateArticle }) {
   const [allowEdit, setAllowEdit] = useState(false);
   const [favState, setFavState] = useState("");
 
+  const URL = `${process.env.REACT_APP_API_URL}/articles/${id}`;
+
   //DELETE FROM DB
   //==============
   function handleArticleDelete() {
-    fetch(`http://localhost:9292/articles/${id}`, { method: "DELETE" })
+    fetch(URL, { method: "DELETE" })
       .then((res) => res.json())
       .then(() => onDeleteArticle(article))
       .catch((err) => console.error(err));

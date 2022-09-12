@@ -5,7 +5,8 @@ import ReviewItem from "../ReviewItem";
 function Reviews() {
   const [reviews, setReviews] = useState([]);
 
-  const URL = "http://localhost:9292/reviews";
+  // const URL = "http://localhost:9292/reviews";
+  const URL = `${process.env.REACT_APP_API_URL}/reviews`;
 
   // CREATE (READ) REVIEWS
   // ======================

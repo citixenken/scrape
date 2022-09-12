@@ -27,7 +27,9 @@ const EditArticle = ({
       date_published: articleDatePublished,
     };
 
-    fetch(`http://localhost:9292/articles/${id}`, {
+    const URL = `${process.env.REACT_APP_API_URL}/articles/${id}`;
+
+    fetch(URL, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
