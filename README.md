@@ -52,7 +52,7 @@ NOTE:
 ### Frontend - via Netflify
 This is the [main](https://github.com/citixenken/scrape/tree/main/scrape-frontend) repository that handles all frontend operations.
 
-Frontend Netlify live [link](https://bookhub-app.netlify.app/)
+Frontend Netlify live [link](scrape-frontend.netlify.app/)
 
 ### Backend - via Heroku
 Used the provided [Backend Setup template](https://github.com/citixenken/scrape/tree/main/scrape-backend) to generate backend code. Facilitates faster deployment of generated JSON data to Heroku.
