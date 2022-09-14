@@ -7,18 +7,6 @@ class ArticleController < Sinatra::Base
     articles.to_json
   end
 
-  #GET => Readers
-  get "/readers" do
-    readers = Reader.all.order(:rating)
-    readers.to_json
-  end
-
-  #GET => Reviews
-  get "/reviews" do
-    reviews = Review.all.order(:username)
-    reviews.to_json
-  end
-
   #POST
   post '/articles' do
     article = Article.create(

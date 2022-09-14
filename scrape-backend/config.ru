@@ -1,4 +1,8 @@
 require_relative "./config/environment"
+require_relative "./app/controllers/article_controller"
+require_relative "./app/controllers/reader_controller"
+require_relative "./app/controllers/review_controller"
+
 
 # Allow CORS (Cross-Origin Resource Sharing) requests
 use Rack::Cors do
